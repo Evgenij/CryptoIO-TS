@@ -1,0 +1,18 @@
+@import "../../../styles/vars";
+
+.popup {
+	transform: translateX(-50%);
+	left: 50%;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -7px;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid $panel;
+	}
+}

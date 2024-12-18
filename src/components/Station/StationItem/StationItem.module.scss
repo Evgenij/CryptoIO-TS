@@ -1,0 +1,16 @@
+@import "../../../styles/vars";
+
+.stationItem {
+	transition: 0.1s;
+	cursor: pointer;
+
+	&:hover {
+		transform: translateY(-3px);
+		background-color: $primary;
+		box-shadow: 0px 3px 0px darken($color: $primary, $amount: 5);
+	}
+
+	&.active {
+		background-color: $primary;
+	}
+}

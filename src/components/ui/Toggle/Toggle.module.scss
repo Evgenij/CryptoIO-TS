@@ -1,0 +1,80 @@
+@import "../../../styles/vars";
+
+$toggle-width: 24px;
+$toggle-height: 14px;
+
+.checkbox {
+	input[type="checkbox"] {
+		position: absolute;
+		left: -9999px;
+
+		& + label {
+			position: relative;
+			display: inline-block;
+			padding: 0px 0px 0px calc($toggle-width + 10px);
+			cursor: pointer;
+
+			&:hover {
+				&:before {
+					border: 2px solid rgba(255, 255, 255, 0.2);
+				}
+			}
+
+			// Default State
+			&:before,
+			&:after {
+				transition: 0.1s;
+				display: block;
+				content: "";
+				position: absolute;
+			}
+
+			&:before {
+				left: 0;
+				top: 50%;
+				margin: calc(-1 * $toggle-height/2) 0 0;
+				width: $toggle-width;
+				height: $toggle-height;
+				background-color: $panel;
+				border: 2px solid rgba(255, 255, 255, 0.05);
+			}
+
+			&:after {
+				left: 3px;
+				top: calc(50% + 3px);
+				margin: calc(-1 * $toggle-height / 2) 0 0;
+				width: 8px;
+				height: 8px;
+				background-color: rgba(255, 255, 255, 0.05);
+			}
+		}
+
+		// Checked State
+		&:checked + label {
+			&:after {
+				left: 13px;
+				background-color: $primary;
+				box-shadow: 0px 0px 7px -1px $primary;
+				box-shadow: 0px 0px 8px 1px rgba($color: $primary, $alpha: 0.6);
+			}
+		}
+
+		// Disabled State
+		&:disabled {
+			& + label {
+				cursor: not-allowed;
+
+				&:before {
+					background-position: calc(-1 * $toggle-width * 2) 0;
+				}
+			}
+
+			// Disabled Checked
+			&:checked + label {
+				&:before {
+					background-position: calc(-1 * $toggle-width * 3) 0;
+				}
+			}
+		}
+	}
+}

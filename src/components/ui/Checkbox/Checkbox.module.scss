@@ -1,0 +1,65 @@
+@import "../../../styles/vars";
+
+$checkbox-width: 14px;
+
+.checkbox {
+	input[type="checkbox"] {
+		position: absolute;
+		left: -9999px;
+
+		& + label {
+			position: relative;
+			display: inline-block;
+			padding: 0px 0px 0px calc($checkbox-width + 10px);
+			cursor: pointer;
+
+			&:hover {
+				&:before {
+					border: 2px solid rgba(255, 255, 255, 0.2);
+				}
+			}
+
+			// Default State
+			&:before {
+				transition: 0.1s;
+				display: block;
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin: calc(-1 * $checkbox-width/2) 0 0;
+				width: $checkbox-width;
+				height: $checkbox-width;
+				background-color: $panel;
+				border: 2px solid rgba(255, 255, 255, 0.05);
+			}
+		}
+
+		// Checked State
+		&:checked + label {
+			&:before {
+				background-color: $primary;
+				border: 2px solid rgba(255, 255, 255, 0.3);
+				box-shadow: 0px 0px 7px -1px $primary;
+			}
+		}
+
+		// Disabled State
+		&:disabled {
+			& + label {
+				cursor: not-allowed;
+
+				&:before {
+					background-position: calc(-1 * $checkbox-width * 2) 0;
+				}
+			}
+
+			// Disabled Checked
+			&:checked + label {
+				&:before {
+					background-position: calc(-1 * $checkbox-width * 3) 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+// @import "./_vars.scss";
+@use "vars";
+@use "reset_styles.scss";
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=VT323&display=swap");
+
+html {
+	height: 100vh;
+}
+
+body {
+	background-color: vars.$background;
+
+	* {
+		color: vars.$color;
+		font-family: "Chakra Petch", sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		font-style: normal;
+		background-color: transparent;
+	}
+}
+
+.bg {
+	&-panel {
+		background-color: vars.$panel;
+		&-light {
+			background-color: vars.$panel-light;
+		}
+	}
+
+	&-image {
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+	}
+
+	&-white {
+		&-1 {
+			background-color: rgba(255, 255, 255, 0.01);
+		}
+		&-2 {
+			background-color: rgba(255, 255, 255, 0.02);
+		}
+		&-3 {
+			background-color: rgba(255, 255, 255, 0.03);
+		}
+		&-4 {
+			background-color: rgba(255, 255, 255, 0.04);
+		}
+		&-5 {
+			background-color: rgba(255, 255, 255, 0.05);
+		}
+		&-10 {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		&-20 {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+		&-30 {
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		&-40 {
+			background-color: rgba(255, 255, 255, 0.4);
+		}
+		&-50 {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		&-60 {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+		&-70 {
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+		&-80 {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+		&-90 {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+	}
+}

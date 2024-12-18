@@ -1,0 +1,176 @@
+@import "../../../styles/vars";
+$translateY: 3px;
+$amountHover: 5;
+$amountActive: 10;
+
+.button {
+	padding: 0.8em 1.2em;
+	background-color: $primary;
+	border: none;
+	box-shadow: 0px $translateY 0px
+		darken($color: $primary, $amount: $amountActive);
+	color: $color;
+	transition: 0.1s;
+	cursor: pointer;
+	min-width: max-content;
+	font-weight: 700;
+
+	&:hover {
+		background-color: darken($color: $primary, $amount: $amountHover);
+	}
+
+	&:active {
+		transform: translateY($translateY);
+		box-shadow: 0px 0px 0px darken($color: $primary, $amount: $amountActive);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.4;
+		background-color: $disabled;
+		box-shadow: 0px $translateY 0px
+			darken($color: $disabled, $amount: $amountActive);
+
+		&:hover {
+			background-color: none;
+		}
+	}
+
+	&.small {
+		padding: 0.1em 0.7em;
+	}
+	&.shadow {
+		// border: none !important;
+		box-shadow: none;
+		background-color: $panel-light;
+
+		&:hover {
+			background-color: $panel;
+		}
+	}
+
+	// red ------------
+
+	&.red {
+		background-color: $red;
+		box-shadow: 0px $translateY 0px darken($color: $red, $amount: 10);
+
+		&:hover {
+			background-color: darken($color: $red, $amount: $amountHover);
+		}
+
+		&:active {
+			box-shadow: 0 0 0 darken($color: $red, $amount: 15);
+			background-color: darken($color: $red, $amount: $amountActive);
+		}
+
+		&:disabled {
+			background-color: $disabled;
+			box-shadow: 0px $translateY 0px
+				darken($color: $disabled, $amount: $amountActive);
+			&:hover {
+				background-color: $disabled;
+			}
+		}
+	}
+
+	// blue ------------
+
+	&.blue {
+		background-color: $blue;
+		box-shadow: 0px $translateY 0px darken($color: $blue, $amount: 10);
+
+		&:hover {
+			background-color: darken($color: $blue, $amount: $amountHover);
+		}
+
+		&:active {
+			box-shadow: 0 0 0 darken($color: $blue, $amount: 15);
+			background-color: darken($color: $blue, $amount: $amountActive);
+		}
+
+		&:disabled {
+			background-color: $disabled;
+			box-shadow: 0px $translateY 0px
+				darken($color: $disabled, $amount: $amountActive);
+			&:hover {
+				background-color: $disabled;
+			}
+		}
+	}
+
+	// yellow ------------
+
+	&.yellow {
+		background-color: $yellow;
+		box-shadow: 0px $translateY 0px darken($color: $yellow, $amount: 10);
+
+		&:hover {
+			background-color: darken($color: $yellow, $amount: $amountHover);
+		}
+
+		&:active {
+			box-shadow: 0 0 0 darken($color: $yellow, $amount: 15);
+			background-color: darken($color: $yellow, $amount: $amountActive);
+		}
+
+		&:disabled {
+			background-color: $disabled;
+			box-shadow: 0px $translateY 0px
+				darken($color: $disabled, $amount: $amountActive);
+			&:hover {
+				background-color: $disabled;
+			}
+		}
+	}
+
+	// green ------------
+
+	&.green {
+		background-color: $green;
+		box-shadow: 0px $translateY 0px darken($color: $green, $amount: 10);
+
+		&:hover {
+			background-color: darken($color: $green, $amount: $amountHover);
+		}
+
+		&:active {
+			box-shadow: 0 0 0 darken($color: $green, $amount: 15);
+			background-color: darken($color: $green, $amount: $amountActive);
+		}
+
+		&:disabled {
+			background-color: $disabled;
+			box-shadow: 0px $translateY 0px
+				darken($color: $disabled, $amount: $amountActive);
+			&:hover {
+				background-color: $disabled;
+			}
+		}
+	}
+
+	// gray ------------
+
+	&.gray {
+		background-color: $gray;
+		box-shadow: 0px $translateY 0px darken($color: $gray, $amount: 10);
+
+		&:hover {
+			background-color: darken($color: $gray, $amount: $amountHover);
+		}
+
+		&:active {
+			box-shadow: 0 0 0 darken($color: $gray, $amount: 15);
+			background-color: darken($color: $gray, $amount: $amountActive);
+		}
+
+		&:disabled {
+			background-color: $disabled;
+			box-shadow: 0px $translateY 0px
+				darken($color: $disabled, $amount: $amountActive);
+			&:hover {
+				background-color: $disabled;
+			}
+		}
+	}
+}

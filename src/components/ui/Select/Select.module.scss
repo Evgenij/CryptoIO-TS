@@ -1,0 +1,42 @@
+@import "../../../styles/vars";
+
+.select {
+	position: relative;
+	display: block;
+	padding: 0.8em 2.5em 0.8em 0.8em;
+	background-color: $panel;
+	height: fit-content;
+	width: fit-content;
+
+	&:hover {
+		background-color: lighten($color: $panel, $amount: 0.7);
+	}
+
+	&::before {
+		transition: 0.1s;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		position: absolute;
+		display: block;
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 7px solid $color;
+	}
+}
+
+input:checked + .select::before {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.optionsList {
+	border: 1px solid rgba($color: white, $alpha: 0.02);
+	position: absolute;
+	top: 36px;
+	left: 0;
+	width: 100%;
+	background-color: $panel;
+}

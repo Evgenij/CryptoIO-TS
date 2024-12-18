@@ -1,0 +1,59 @@
+.menu {
+	background-image: radial-gradient(#202020, #000000);
+
+	& .rig {
+		left: -130px;
+		top: -470px;
+		height: 106%;
+	}
+
+	& .motherboard {
+		left: 380px;
+		top: 280px;
+		height: 34%;
+	}
+
+	& .cpu {
+		left: 750px;
+		top: 140px;
+		height: 20%;
+	}
+
+	& .cpuFAN {
+		top: 240px;
+		left: 900px;
+		height: 18%;
+	}
+
+	& .ram {
+		height: 11%;
+
+		&.first {
+			top: 510px;
+			left: 860px;
+		}
+
+		&.second {
+			top: 550px;
+			left: 800px;
+		}
+	}
+
+	& .gpu {
+		top: 610px;
+		left: 630px;
+		height: 26%;
+	}
+
+	& .ssd {
+		top: 690px;
+		left: 391px;
+		height: 11%;
+	}
+
+	& .power {
+		top: 490px;
+		left: 160px;
+		height: 24%;
+	}
+}

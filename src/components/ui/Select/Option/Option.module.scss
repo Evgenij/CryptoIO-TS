@@ -1,0 +1,10 @@
+@import "../../../../styles/vars";
+
+.option {
+	transition: 0.1s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: lighten($color: $panel, $amount: 0.7);
+	}
+}

@@ -1,0 +1,17 @@
+@import "../../../../styles/vars";
+
+.gbItem {
+	width: 100%;
+	text-align: center;
+	padding: 0.6em 1.1em;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba($color: white, $alpha: 0.05);
+	}
+
+	&.active {
+		border-color: rgba($color: white, $alpha: 0.3);
+		background-color: $gray;
+	}
+}
