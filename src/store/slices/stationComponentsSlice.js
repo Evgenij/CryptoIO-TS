@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import IMAGES from "../../images/images.js";
 import { componentsFactory } from "../../helpers/componentsFactory.js";
+import { Motherboards } from "../../types/types components/manufactures.ts";
 
 const initialComponents = {
 	motherboards: [
 		{
 			id: 1,
-			name: "MSI B550M PRO-VDH",
+			manufacturer: Motherboards.Gigabate,
+			model: "B320-M",
 			image: IMAGES.motherboards.lvl1,
 			supporting_components: [
 				// ID-s CPU
@@ -32,7 +34,8 @@ const initialComponents = {
 		},
 		{
 			id: 2,
-			name: "MSI MAG B550 Tomahawk",
+			manufacturer: Motherboards.Axios,
+			model: "B320-M",
 			image: IMAGES.motherboards.lvl2,
 			characteristics: [
 				{
@@ -56,7 +59,7 @@ const initialComponents = {
 		},
 		{
 			id: 3,
-			name: "ASUS ROG Strix Z790-F Gaming",
+			manufacturer: Motherboards.Ziostar,
 			image: IMAGES.motherboards.lvl3,
 			characteristics: [
 				{
@@ -80,7 +83,7 @@ const initialComponents = {
 		},
 		{
 			id: 4,
-			name: "ASUS TUF Gaming B550M-PLUS",
+			manufacturer: "ASUS TUF Gaming B550M-PLUS",
 			image: IMAGES.motherboards.lvl4,
 			characteristics: [
 				{
@@ -104,7 +107,7 @@ const initialComponents = {
 		},
 		{
 			id: 5,
-			name: "ASUS ROG Strix B760-A Gaming",
+			manufacturer: "ASUS ROG Strix B760-A Gaming",
 			image: IMAGES.motherboards.lvl5,
 			characteristics: [
 				{
@@ -128,7 +131,7 @@ const initialComponents = {
 		},
 		{
 			id: 6,
-			name: "ASUS ROG HYPER-X",
+			manufacturer: "ASUS ROG HYPER-X",
 			image: IMAGES.motherboards.lvl6,
 			characteristics: [
 				{
@@ -152,7 +155,7 @@ const initialComponents = {
 		},
 		{
 			id: 7,
-			name: "ASUS ROG X1500 Fusion",
+			manufacturer: "ASUS ROG X1500 Fusion",
 			image: IMAGES.motherboards.lvl7,
 			characteristics: [
 				{
@@ -178,7 +181,7 @@ const initialComponents = {
 	CPUs: [
 		{
 			id: 10,
-			name: "Intel Pentium G6960",
+			manufacturer: "Intel Pentium G6960",
 			image: IMAGES.CPUs.lvl1,
 			characteristics: [
 				{
@@ -202,7 +205,7 @@ const initialComponents = {
 		},
 		{
 			id: 11,
-			name: "Intel CORE i3",
+			manufacturer: "Intel CORE i3",
 			image: IMAGES.CPUs.lvl2,
 
 			characteristics: [
@@ -227,7 +230,7 @@ const initialComponents = {
 		},
 		{
 			id: 12,
-			name: "Intel CORE i5",
+			manufacturer: "Intel CORE i5",
 			image: IMAGES.CPUs.lvl3,
 
 			characteristics: [
@@ -252,7 +255,7 @@ const initialComponents = {
 		},
 		{
 			id: 13,
-			name: "Intel CORE i7",
+			manufacturer: "Intel CORE i7",
 			image: IMAGES.CPUs.lvl4,
 
 			characteristics: [
@@ -277,7 +280,7 @@ const initialComponents = {
 		},
 		{
 			id: 14,
-			name: "Intel CORE i9-9900K",
+			manufacturer: "Intel CORE i9-9900K",
 			image: IMAGES.CPUs.lvl5,
 			characteristics: [
 				{
@@ -301,7 +304,7 @@ const initialComponents = {
 		},
 		{
 			id: 15,
-			name: "Intel CORE i9-9900K ULTRA",
+			manufacturer: "Intel CORE i9-9900K ULTRA",
 			image: IMAGES.CPUs.lvl6,
 			characteristics: [
 				{
@@ -325,7 +328,7 @@ const initialComponents = {
 		},
 		{
 			id: 16,
-			name: "Intel CORE i9-10500K ULTRA",
+			manufacturer: "Intel CORE i9-10500K ULTRA",
 			image: IMAGES.CPUs.lvl7,
 			characteristics: [
 				{
@@ -351,7 +354,7 @@ const initialComponents = {
 	CPUsFANs: [
 		{
 			id: 200,
-			name: "Arctic X10",
+			manufacturer: "Arctic X10",
 			image: IMAGES.CPUsFANs.lvl1,
 
 			characteristics: [
@@ -368,7 +371,7 @@ const initialComponents = {
 		},
 		{
 			id: 201,
-			name: "Arctic XL",
+			manufacturer: "Arctic XL",
 			image: IMAGES.CPUsFANs.lvl2,
 
 			characteristics: [
@@ -385,7 +388,7 @@ const initialComponents = {
 		},
 		{
 			id: 202,
-			name: "Arctic V2",
+			manufacturer: "Arctic V2",
 			image: IMAGES.CPUsFANs.lvl3,
 
 			characteristics: [
@@ -402,7 +405,7 @@ const initialComponents = {
 		},
 		{
 			id: 203,
-			name: "Arctic FROZEN",
+			manufacturer: "Arctic FROZEN",
 			image: IMAGES.CPUsFANs.lvl4,
 
 			characteristics: [
@@ -419,7 +422,7 @@ const initialComponents = {
 		},
 		{
 			id: 204,
-			name: "Arctic FNX",
+			manufacturer: "Arctic FNX",
 			image: IMAGES.CPUsFANs.lvl5,
 
 			characteristics: [
@@ -436,7 +439,7 @@ const initialComponents = {
 		},
 		{
 			id: 205,
-			name: "Arctic KING SNOW",
+			manufacturer: "Arctic KING SNOW",
 			image: IMAGES.CPUsFANs.lvl6,
 
 			characteristics: [
@@ -453,7 +456,7 @@ const initialComponents = {
 		},
 		{
 			id: 206,
-			name: "Arctic MONSTER",
+			manufacturer: "Arctic MONSTER",
 			image: IMAGES.CPUsFANs.lvl7,
 
 			characteristics: [
@@ -472,7 +475,7 @@ const initialComponents = {
 	RAMs: [
 		{
 			id: 100,
-			name: "Kingston 2GB",
+			manufacturer: "Kingston 2GB",
 			image: IMAGES.RAMs.lvl1,
 
 			characteristics: [
@@ -497,7 +500,7 @@ const initialComponents = {
 		},
 		{
 			id: 101,
-			name: "Kingston 4GB",
+			manufacturer: "Kingston 4GB",
 			image: IMAGES.RAMs.lvl2,
 
 			characteristics: [
@@ -522,7 +525,7 @@ const initialComponents = {
 		},
 		{
 			id: 102,
-			name: "Kingston FUSION 4GB",
+			manufacturer: "Kingston FUSION 4GB",
 			image: IMAGES.RAMs.lvl3,
 
 			characteristics: [
@@ -547,7 +550,7 @@ const initialComponents = {
 		},
 		{
 			id: 103,
-			name: "Kingston ADRENALIN 8GB",
+			manufacturer: "Kingston ADRENALIN 8GB",
 			image: IMAGES.RAMs.lvl4,
 
 			characteristics: [
@@ -572,7 +575,7 @@ const initialComponents = {
 		},
 		{
 			id: 104,
-			name: "Kingston EXTRIME 16GB",
+			manufacturer: "Kingston EXTRIME 16GB",
 			image: IMAGES.RAMs.lvl5,
 
 			characteristics: [
@@ -597,7 +600,7 @@ const initialComponents = {
 		},
 		{
 			id: 105,
-			name: "Kingston EXTRIME 16GB",
+			manufacturer: "Kingston EXTRIME 16GB",
 			image: IMAGES.RAMs.lvl6,
 
 			characteristics: [
@@ -622,7 +625,7 @@ const initialComponents = {
 		},
 		{
 			id: 106,
-			name: "Kingston EXTRIME 16GB",
+			manufacturer: "Kingston EXTRIME 16GB",
 			image: IMAGES.RAMs.lvl7,
 
 			characteristics: [
@@ -649,7 +652,7 @@ const initialComponents = {
 	GPUs: [
 		{
 			id: 1000,
-			name: "GeForce 8400M GT",
+			manufacturer: "GeForce 8400M GT",
 			image: IMAGES.GPUs.lvl1,
 
 			characteristics: [
@@ -682,7 +685,7 @@ const initialComponents = {
 		},
 		{
 			id: 1001,
-			name: "GeForce GT 320",
+			manufacturer: "GeForce GT 320",
 			image: IMAGES.GPUs.lvl2,
 
 			characteristics: [
@@ -715,7 +718,7 @@ const initialComponents = {
 		},
 		{
 			id: 1002,
-			name: "GeForce GTX 860M",
+			manufacturer: "GeForce GTX 860M",
 			image: IMAGES.GPUs.lvl3,
 
 			characteristics: [
@@ -748,7 +751,7 @@ const initialComponents = {
 		},
 		{
 			id: 1003,
-			name: "GeForce RTX 2160",
+			manufacturer: "GeForce RTX 2160",
 			image: IMAGES.GPUs.lvl4,
 
 			characteristics: [
@@ -781,7 +784,7 @@ const initialComponents = {
 		},
 		{
 			id: 1004,
-			name: "GeForce RT_IKS 4060",
+			manufacturer: "GeForce RT_IKS 4060",
 			image: IMAGES.GPUs.lvl5,
 
 			characteristics: [
@@ -814,7 +817,7 @@ const initialComponents = {
 		},
 		{
 			id: 1005,
-			name: "GeForce 5040-TX",
+			manufacturer: "GeForce 5040-TX",
 			image: IMAGES.GPUs.lvl6,
 
 			characteristics: [
@@ -847,7 +850,7 @@ const initialComponents = {
 		},
 		{
 			id: 1006,
-			name: "GeForce 6600RX",
+			manufacturer: "GeForce 6600RX",
 			image: IMAGES.GPUs.lvl7,
 
 			characteristics: [
@@ -882,7 +885,7 @@ const initialComponents = {
 	SSDs: [
 		{
 			id: 300,
-			name: "Kingston 64GB",
+			manufacturer: "Kingston 64GB",
 			image: IMAGES.SSDs.lvl1,
 
 			characteristics: [
@@ -899,7 +902,7 @@ const initialComponents = {
 		},
 		{
 			id: 301,
-			name: "Kingston 128GB",
+			manufacturer: "Kingston 128GB",
 			image: IMAGES.SSDs.lvl2,
 
 			characteristics: [
@@ -916,7 +919,7 @@ const initialComponents = {
 		},
 		{
 			id: 302,
-			name: "Kingston 256GB",
+			manufacturer: "Kingston 256GB",
 			image: IMAGES.SSDs.lvl3,
 
 			characteristics: [
@@ -933,7 +936,7 @@ const initialComponents = {
 		},
 		{
 			id: 303,
-			name: "Kingston 512GB",
+			manufacturer: "Kingston 512GB",
 			image: IMAGES.SSDs.lvl4,
 
 			characteristics: [
@@ -950,7 +953,7 @@ const initialComponents = {
 		},
 		{
 			id: 304,
-			name: "Kingston 1TB",
+			manufacturer: "Kingston 1TB",
 			image: IMAGES.SSDs.lvl5,
 
 			characteristics: [
@@ -967,7 +970,7 @@ const initialComponents = {
 		},
 		{
 			id: 305,
-			name: "Kingston 1TB",
+			manufacturer: "Kingston 1TB",
 			image: IMAGES.SSDs.lvl6,
 
 			characteristics: [
@@ -984,7 +987,7 @@ const initialComponents = {
 		},
 		{
 			id: 306,
-			name: "Kingston 1TB",
+			manufacturer: "Kingston 1TB",
 			image: IMAGES.SSDs.lvl7,
 
 			characteristics: [
@@ -1003,7 +1006,7 @@ const initialComponents = {
 	PowerSupply: [
 		{
 			id: 400,
-			name: "Gigabyte 400X",
+			manufacturer: "Gigabyte 400X",
 			image: IMAGES.PowerSupply.lvl1,
 
 			characteristics: [
@@ -1020,7 +1023,7 @@ const initialComponents = {
 		},
 		{
 			id: 401,
-			name: "Gigabyte 800X",
+			manufacturer: "Gigabyte 800X",
 			image: IMAGES.PowerSupply.lvl2,
 
 			characteristics: [
@@ -1037,7 +1040,7 @@ const initialComponents = {
 		},
 		{
 			id: 402,
-			name: "Gigabyte 1400X",
+			manufacturer: "Gigabyte 1400X",
 			image: IMAGES.PowerSupply.lvl3,
 
 			characteristics: [
@@ -1054,7 +1057,7 @@ const initialComponents = {
 		},
 		{
 			id: 403,
-			name: "Gigabyte 1800X",
+			manufacturer: "Gigabyte 1800X",
 			image: IMAGES.PowerSupply.lvl4,
 
 			characteristics: [
@@ -1124,7 +1127,7 @@ const initialComponents = {
 	RIGs: [
 		{
 			id: 500,
-			name: "RIG x5",
+			manufacturer: "RIG x5",
 			image: IMAGES.RIGs.lvl1,
 
 			characteristics: [
@@ -1145,7 +1148,7 @@ const initialComponents = {
 		},
 		{
 			id: 501,
-			name: "RIG RX-8",
+			manufacturer: "RIG RX-8",
 			image: IMAGES.RIGs.lvl2,
 
 			characteristics: [
@@ -1166,7 +1169,7 @@ const initialComponents = {
 		},
 		{
 			id: 502,
-			name: "Storm 10",
+			manufacturer: "Storm 10",
 			image: IMAGES.RIGs.lvl3,
 
 			characteristics: [
@@ -1187,7 +1190,7 @@ const initialComponents = {
 		},
 		{
 			id: 503,
-			name: "HUB EXTRIME",
+			manufacturer: "HUB EXTRIME",
 			image: IMAGES.RIGs.lvl4,
 
 			characteristics: [
@@ -1208,7 +1211,7 @@ const initialComponents = {
 		},
 		{
 			id: 504,
-			name: "CRYPTO MONSTER",
+			manufacturer: "CRYPTO MONSTER",
 			image: IMAGES.RIGs.lvl5,
 
 			characteristics: [
@@ -1229,7 +1232,7 @@ const initialComponents = {
 		},
 		{
 			id: 505,
-			name: "MINER 2600",
+			manufacturer: "MINER 2600",
 			image: IMAGES.RIGs.lvl6,
 
 			characteristics: [
@@ -1250,7 +1253,156 @@ const initialComponents = {
 		},
 		{
 			id: 506,
-			name: "MINER 5100",
+			manufacturer: "MINER 5100",
+			image: IMAGES.RIGs.lvl7,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 32,
+				},
+				{
+					name: "Slots supply",
+					value: 4,
+				},
+				{
+					name: "Temperature drop",
+					value: 90,
+					label: "°C",
+				},
+			],
+		},
+	],
+	ThermalGrease: [
+		{
+			id: 700,
+			manufacturer: "Thermal",
+			image: IMAGES.RIGs.lvl1,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 2,
+				},
+				{
+					name: "Slots supply",
+					value: 1,
+				},
+				{
+					name: "Temperature drop",
+					value: 5,
+					label: "°C",
+				},
+			],
+		},
+		{
+			id: 501,
+			manufacturer: "RIG RX-8",
+			image: IMAGES.RIGs.lvl2,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 4,
+				},
+				{
+					name: "Slots supply",
+					value: 1,
+				},
+				{
+					name: "Temperature drop",
+					value: 10,
+					label: "°C",
+				},
+			],
+		},
+		{
+			id: 502,
+			manufacturer: "Storm 10",
+			image: IMAGES.RIGs.lvl3,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 8,
+				},
+				{
+					name: "Slots supply",
+					value: 2,
+				},
+				{
+					name: "Temperature drop",
+					value: 25,
+					label: "°C",
+				},
+			],
+		},
+		{
+			id: 503,
+			manufacturer: "HUB EXTRIME",
+			image: IMAGES.RIGs.lvl4,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 12,
+				},
+				{
+					name: "Slots supply",
+					value: 2,
+				},
+				{
+					name: "Temperature drop",
+					value: 35,
+					label: "°C",
+				},
+			],
+		},
+		{
+			id: 504,
+			manufacturer: "CRYPTO MONSTER",
+			image: IMAGES.RIGs.lvl5,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 24,
+				},
+				{
+					name: "Slots supply",
+					value: 3,
+				},
+				{
+					name: "Temperature drop",
+					value: 50,
+					label: "°C",
+				},
+			],
+		},
+		{
+			id: 505,
+			manufacturer: "MINER 2600",
+			image: IMAGES.RIGs.lvl6,
+
+			characteristics: [
+				{
+					name: "Slots GPU",
+					value: 24,
+				},
+				{
+					name: "Slots supply",
+					value: 3,
+				},
+				{
+					name: "Temperature drop",
+					value: 65,
+					label: "°C",
+				},
+			],
+		},
+		{
+			id: 506,
+			manufacturer: "MINER 5100",
 			image: IMAGES.RIGs.lvl7,
 
 			characteristics: [

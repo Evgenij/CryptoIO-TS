@@ -29,7 +29,7 @@ const IMAGES = {
 			import.meta.url
 		).href,
 	},
-	motherboards: {
+	Motherboards: {
 		lvl1: new URL(
 			"./components/motherboard/Motherboard - lvl1@1-1904x993.png",
 			import.meta.url
@@ -236,6 +236,36 @@ const IMAGES = {
 		).href,
 		lvl7: new URL(
 			"./components/power/Block power - lvl7@1-1920x1009.png",
+			import.meta.url
+		).href,
+	},
+	ThermalGrease: {
+		lvl1: new URL(
+			"./components/thermal grease/ThermalGrease-lvl1@1-1920x1009.png",
+			import.meta.url
+		).href,
+		lvl2: new URL(
+			"./components/thermal grease/ThermalGrease-lvl2@1-1920x1009.png",
+			import.meta.url
+		).href,
+		lvl3: new URL(
+			"./components/thermal grease/ThermalGrease-lvl3@1-1920x1009.png",
+			import.meta.url
+		).href,
+		lvl4: new URL(
+			"./components/thermal grease/ThermalGrease-lvl4@1-1920x1009.png",
+			import.meta.url
+		).href,
+		lvl5: new URL(
+			"./components/thermal grease/ThermalGrease-lvl5@1-1920x1009.png",
+			import.meta.url
+		).href,
+		lvl6: new URL(
+			"./components/thermal grease/ThermalGrease-lvl6@1-1920x1009.png",
+			import.meta.url
+		).href,
+		lvl7: new URL(
+			"./components/thermal grease/ThermalGrease-lvl7@1-1920x1009.png",
 			import.meta.url
 		).href,
 	},
